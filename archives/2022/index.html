@@ -45,6 +45,9 @@
 
 
   
+    <script src="/lib/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
 
 </head>
 
@@ -55,7 +58,7 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -94,11 +97,25 @@
 			<div class="social">
 				
 					
-						<a class="github" target="_blank" rel="noopener" href="https://github.com/Wakeuppppp" 
-												title="GitHub" ><i class="icon-github"></i></a>
+						<a class="github" href="https://github.com/Wakeuppppp" 
+												title="GitHub" target="_blank"><i class="icon-github"></i></a>
+					
+				
+					
+						<a class="weixin" href="/img/weixin_.jpg" 
+												title="wechat" target="_blank"><i class="icon-weixin"></i></a>
 					
 				
 			</div>
+		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=1473654934&auto=1&height=32"></iframe>
+			</div>
+			
 		
 		</nav>
 	</header>		
@@ -144,6 +161,11 @@
 						
 						<a class="github" target="_blank" 
 							href="https://github.com/Wakeuppppp" title="GitHub"><i class="icon-github"></i></a>
+						
+					
+						
+						<a class="weixin" target="_blank" 
+							href="/img/weixin_.jpg" title="wechat"><i class="icon-weixin"></i></a>
 						
 					
 				</div>
@@ -260,7 +282,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2022 <a href="http://example.com/" target="_blank">_谷安</a>
+    		&copy; 2022 <a href="http://example.com/" target="_blank">_谷安</a>
     	</div>
       	<div class="footer-right">
 			
@@ -274,15 +296,6 @@
 	<script src="/lib/busuanzi.pure.js"></script>
 	
   
-  
-	
-	<span id="busuanzi_container_site_pv" style="display:none">
-		本站总访问量<span id="busuanzi_value_site_pv"></span>次	
-	        <span class="post-meta-divider" >|</span>
-	</span>
-  	<span id="busuanzi_container_site_uv" style='display:none'>
-  		本站访客数<span id="busuanzi_value_site_uv"></span>人
-  	</span>
   
 </footer>
 
@@ -315,10 +328,10 @@
   var titleTime;
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) {
-      document.title = "我藏好了哦~ " + originTitle;
+      document.title = "藏好了哦~~~ " + originTitle;
       clearTimeout(titleTime);
     } else {
-      document.title = "被你发现啦~ " + originTitle;
+      document.title = "被你发现啦~~~ " + originTitle;
       titleTime = setTimeout(function () {
         document.title = originTitle;
       }, 2000);
@@ -485,7 +498,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Go、C++后端开发、Python爬虫<br><br>联系QQ:708966958<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Go、C++后端开发、Python爬虫<br><br>WeChat：Sqrt625<br><br>QQ：708966958<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
   	  	
     	</section>
     
@@ -561,6 +574,35 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
@@ -572,6 +614,56 @@
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
+  
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hijiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+      
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
   
   
 </body>
