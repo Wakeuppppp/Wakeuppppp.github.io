@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="写在前面，本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！    下载安装node.js 地址: Node.js (nodejs.org)   建议下载 LTS 版本, 更稳定">
+  <meta name="description" content="写在前面 本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QuickStart">
 <meta property="og:url" content="https://wakeuppppp.github.io/2022/04/11/QuickStart/index.html">
 <meta property="og:site_name" content="_谷安&#39;s Blog">
-<meta property="og:description" content="写在前面，本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！    下载安装node.js 地址: Node.js (nodejs.org)   建议下载 LTS 版本, 更稳定">
+<meta property="og:description" content="写在前面 本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/QuickStart/download.png">
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/QuickStart/cmd.png">
@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/QuickStart/dirExp.png">
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/QuickStart/theme.png">
 <meta property="article:published_time" content="2022-04-11T03:26:40.000Z">
-<meta property="article:modified_time" content="2022-04-11T05:47:56.820Z">
+<meta property="article:modified_time" content="2022-04-11T06:55:53.125Z">
 <meta property="article:author" content="_谷安">
 <meta property="article:tag" content="_谷安">
 <meta name="twitter:card" content="summary">
@@ -240,7 +240,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">613字</span>
+      <span class="post-count">605字</span>
     </span>
   </span>
 
@@ -262,71 +262,63 @@
     
     <br>
 
-<ul>
-<li>写在前面，本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！</li>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
+<li>本教程旨于在Windows下快速搭建hexo个人博客，期间遇到的问题均可通过Google解决，遇到问题不要怕，方法总比困难多！</li>
 </ul>
 <br>
 
+<p><em><span id="more"></span></em></p>
 <h2 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js"></a>下载安装<code>node.js</code></h2><ul>
 <li>地址: <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js (nodejs.org)</a></li>
 </ul>
 <blockquote>
 <p>建议下载 LTS 版本, 更稳定</p>
 </blockquote>
-<p><img src="/2022/04/11/QuickStart/download.png" alt="download"></p>
+<p>​    <img src="/2022/04/11/QuickStart/download.png" alt="download"></p>
 <br>
 
-<p><em><span id="more"></span></em></p>
 <h4 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h4><ul>
-<li><code>win+R</code> 输入 <code>cmd</code> 打开终端, 输入<code>node -v</code>, <code>npm -v</code>, 若显示如下内容(版本可能不一样), 表示安装成功</li>
-</ul>
+<li><p><code>win+R</code> 输入 <code>cmd</code> 打开终端, 输入<code>node -v</code>, <code>npm -v</code>, 若显示如下内容(版本可能不一样), 表示安装成功</p>
 <p><img src="/2022/04/11/QuickStart/cmd.png" alt="cmd"></p>
+</li>
+</ul>
 <br>
 
 <h2 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装<code>hexo</code>框架</h2><ul>
-<li>打开终端, 输入以下命令</li>
+<li><p>打开终端, 输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>npm install -g hexo-cli</p>
-</blockquote>
 <br>
 
 <ul>
-<li>查看<code>hexo</code>是否安装成功</li>
+<li><p>查看<code>hexo</code>是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>hexo -v</p>
-</blockquote>
 <br>
 
 <ul>
-<li>创建本地博客文件夹</li>
+<li><p>创建本地博客文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> Blog</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>mkdir Blog</p>
-</blockquote>
 <br>
 
 <ul>
-<li>进入<code>Blog</code>文件夹, 初始化</li>
+<li><p>进入<code>Blog</code>文件夹, 初始化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>hexo init</p>
-</blockquote>
 <br>
 
 <ul>
-<li>查看初始化是否成功</li>
-</ul>
+<li><p>查看初始化是否成功</p>
 <p><img src="/2022/04/11/QuickStart/dir.png" alt="dir"></p>
+</li>
+</ul>
 <br>
 
 <ul>
-<li>初始化成功后, 启动<code>hexo</code>服务后，打开网页输入<code>localhost:4000</code>即可访问属于你自己的博客啦~</li>
+<li><p>初始化成功后, 启动<code>hexo</code>服务后，打开网页输入<code>localhost:4000</code>即可访问属于你自己的博客啦~</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>hexo server 或者 hexo s</p>
-</blockquote>
 <br>
 
 <br>
@@ -338,50 +330,48 @@
 <p>username.github.io</p>
 </blockquote>
 <ul>
-<li><strong>注意！！！是<code>username</code>，不是<code>nickname!</code></strong> 以我的举例，仓库名为:<code>Wakeuppppp.github.io</code></li>
-</ul>
+<li><p><strong>注意！！！是<code>username</code>，不是<code>nickname!</code></strong> 以我的举例，仓库名为:<code>Wakeuppppp.github.io</code></p>
 <p><img src="/2022/04/11/QuickStart/repName.png" alt="repName"></p>
+</li>
+</ul>
 <br>
 
 <ul>
-<li>创建成功后, 进入仓库查看分支(后面会用到该分支名)</li>
-</ul>
+<li><p>创建成功后, 进入仓库查看分支(后面会用到该分支名)</p>
 <p><img src="/2022/04/11/QuickStart/master.png" alt="master"></p>
+</li>
+</ul>
 <br>
 
 <ul>
-<li>打开终端，安装插件</li>
+<li><p>打开终端，安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<p>npm install –save hexo-deployer-git</p>
-</blockquote>
 <br>
 
 <ul>
-<li>打开<code>Blog</code>文件夹，打开根目录下的<code>_config.yml</code>文件进行修改</li>
-</ul>
+<li><p>打开<code>Blog</code>文件夹，打开根目录下的<code>_config.yml</code>文件进行修改</p>
 <p><img src="/2022/04/11/QuickStart/config.png" alt="config"></p>
+</li>
+</ul>
 <br>
 
 <ul>
-<li>修改完成后，打开终端，进入<code>Blog</code>文件夹，依次执行以下命令</li>
-</ul>
-<blockquote>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-</blockquote>
-<ul>
-<li>至此，就成功的将你的博客部署到<code>GitHub</code>上了，输入<code>username.github.io</code>即可访问。如果访问失败，不用担心，因为<code>GitHub</code>部署会有延迟，等几分钟就能访问了</li>
+<li><p>修改完成后，打开终端，进入<code>Blog</code>文件夹，依次执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>至此，就成功的将你的博客部署到<code>GitHub</code>上了，输入<code>username.github.io</code>即可访问。如果访问失败，不用担心，因为<code>GitHub</code>部署会有延迟，等几分钟就能访问了</p>
+</li>
 </ul>
 <br>
 
 <br>
 
 <h2 id="hexo文件夹目录结构说明"><a href="#hexo文件夹目录结构说明" class="headerlink" title="hexo文件夹目录结构说明"></a><code>hexo</code>文件夹目录结构说明</h2><ul>
-<li>主要说说<code>Blog</code>下的<code>source、themes</code>文件夹</li>
-</ul>
+<li><p>主要说说<code>Blog</code>下的<code>source、themes</code>文件夹</p>
 <p><img src="/2022/04/11/QuickStart/dirExp.png" alt="dirExp"></p>
+</li>
+</ul>
 <br>
 
 <h4 id="themes文件夹"><a href="#themes文件夹" class="headerlink" title="themes文件夹"></a><code>themes</code>文件夹</h4><ul>
@@ -393,21 +383,18 @@
 <br>
 
 <ul>
-<li>通过<code>git clone</code>指令下载你喜欢的主题，将下载好的主题文件夹拷贝至<code>themes</code>文件夹下</li>
-<li>修改根目录下的配置文件<code>_config.yml</code>, 将<code>theme</code>后的值改为主题<strong>文件夹</strong>的名字</li>
-</ul>
+<li><p>通过<code>git clone</code>指令下载你喜欢的主题，将下载好的主题文件夹拷贝至<code>themes</code>文件夹下</p>
+</li>
+<li><p>修改根目录下的配置文件<code>_config.yml</code>, 将<code>theme</code>后的值改为主题<strong>文件夹</strong>的名字</p>
 <p><img src="/2022/04/11/QuickStart/theme.png" alt="theme"></p>
-<ul>
+</li>
 <li><p>注意：每个主题文件夹下也有一个配置文件<code>_config.yml</code>，用来更改主题配置的，根目录下的配置文件是全局的</p>
 </li>
 <li><p>修改完成后，需要同远程同步，在根目录下打开终端执行以下命令</p>
 </li>
 </ul>
-<blockquote>
-<p>hexo clea</p>
-<p>hexo g</p>
-<p>hexo d</p>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
 <br>
 
 <h5 id="source文件夹"><a href="#source文件夹" class="headerlink" title="source文件夹"></a><code>source</code>文件夹</h5><ul>
