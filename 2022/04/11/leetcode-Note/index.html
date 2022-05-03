@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/leetcode-Note/image-20220427135504500.png">
 <meta property="og:image" content="https://wakeuppppp.github.io/2022/04/11/leetcode-Note/image-20220429171444014.png">
 <meta property="article:published_time" content="2022-04-11T07:57:47.000Z">
-<meta property="article:modified_time" content="2022-05-01T03:02:57.429Z">
+<meta property="article:modified_time" content="2022-05-03T13:08:17.354Z">
 <meta property="article:author" content="_谷安">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="algorithm">
@@ -231,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">5.8k字</span>
+      <span class="post-count">6k字</span>
     </span>
   </span>
 
@@ -502,8 +502,14 @@
 <br>
 
 <h4 id="颠倒字符串中的单词"><a href="#颠倒字符串中的单词" class="headerlink" title="颠倒字符串中的单词"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-words-in-a-string/">颠倒字符串中的单词</a></h4><ul>
-<li><p>解法一：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">reverseWords</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>解法一：这道题用Go相当简单</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseWords</span><span class="params">(s <span class="type">string</span>)</span></span> <span class="type">string</span> &#123;</span><br><span class="line">	res := strings.Split(s, <span class="string">&quot; &quot;</span>) <span class="comment">// 以空格为分界线，将原字符串分解为string数组</span></span><br><span class="line">	str := <span class="string">&quot;&quot;</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="built_in">len</span>(res) - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i-- &#123;</span><br><span class="line">		tmp := strings.Replace(res[i], <span class="string">&quot; &quot;</span>, <span class="string">&quot;&quot;</span>, <span class="number">-1</span>) <span class="comment">// 去空格操作</span></span><br><span class="line">		<span class="keyword">if</span> tmp == <span class="string">&quot;&quot;</span> &#123; <span class="comment">// 遇到空字符串直接跳过</span></span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		str += tmp + <span class="string">&quot; &quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> str[:<span class="built_in">len</span>(str)<span class="number">-1</span>] <span class="comment">// 注意返回值，str的最后一个字符为空格</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<ul>
+<li><p>解法二</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <br>
 
