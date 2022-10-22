@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="谷安的blog">
 <meta property="og:description" content="Overview Cli is a simple, fast, and fun package for building command line apps in Go. The goal is to enable developers to write fast and distributable command line applications in an expressive way.">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/image-20220724162010382.png">
+<meta property="og:image" content="http://example.com/.com//image-20220724162010382.png">
 <meta property="article:published_time" content="2022-07-23T10:17:21.000Z">
 <meta property="article:modified_time" content="2022-07-24T09:03:16.488Z">
 <meta property="article:author" content="谷安">
@@ -25,7 +25,7 @@
 <meta property="article:tag" content="Cli">
 <meta property="article:tag" content="命令行工具">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/image-20220724162010382.png">
+<meta name="twitter:image" content="http://example.com/.com//image-20220724162010382.png">
   
     <link rel="alternative" href="/atom.xml" title="谷安的blog" type="application/atom+xml">
   
@@ -274,11 +274,11 @@
     <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><ul>
 <li>Cli is a simple, fast, and fun package for building command line apps in Go. The goal is to enable developers to write fast and distributable command line applications in an expressive way.</li>
 </ul>
-</br>
+<br>
 
 <h3 id="Installing"><a href="#Installing" class="headerlink" title="Installing"></a>Installing</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> get github.com/urfave/cli/v2</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <p><em><span id="more"></span></em></p>
 <h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><ul>
@@ -291,7 +291,7 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;github.com/urfave/cli/v2&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">	<span class="string">&quot;sort&quot;</span></span><br><span class="line">	<span class="string">&quot;strconv&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	app := &amp;cli.App&#123;</span><br><span class="line">		Flags: []cli.Flag&#123;</span><br><span class="line">			&amp;cli.StringFlag&#123;</span><br><span class="line">				Name:    <span class="string">&quot;lang&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;l&quot;</span>&#125;,</span><br><span class="line">				Value:   <span class="string">&quot;english&quot;</span>,</span><br><span class="line">				Usage:   <span class="string">&quot;Language for the greeting&quot;</span>,</span><br><span class="line">                Required： <span class="literal">true</span>,</span><br><span class="line">			&#125;,</span><br><span class="line">			&amp;cli.StringFlag&#123;</span><br><span class="line">				Name:    <span class="string">&quot;config&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;c&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;Load configuration from `FILE`&quot;</span>,</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">		Commands: []*cli.Command&#123;</span><br><span class="line">			&#123;</span><br><span class="line">				Name:    <span class="string">&quot;complete&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;c&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;complete a task on the list&quot;</span>,</span><br><span class="line">				Action: <span class="function"><span class="keyword">func</span><span class="params">(*cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;complete callback&quot;</span>)</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				Name:    <span class="string">&quot;add&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;a&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;add a task to the list&quot;</span>,</span><br><span class="line">				Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;add callback&quot;</span>)</span><br><span class="line">					sum := <span class="number">0</span></span><br><span class="line">					<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; cCtx.NArg(); i++ &#123;</span><br><span class="line">						temp, err := strconv.Atoi(cCtx.Args().Get(i))</span><br><span class="line">						<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">							fmt.Printf(<span class="string">&quot;第%d个参数非法\n&quot;</span>, i+<span class="number">1</span>)</span><br><span class="line">						&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">							sum += temp</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					fmt.Println(sum)</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">		Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">			name := <span class="string">&quot;Nefertiti&quot;</span></span><br><span class="line">			<span class="keyword">if</span> cCtx.NArg() &gt; <span class="number">0</span> &#123;</span><br><span class="line">				name = cCtx.Args().Get(<span class="number">0</span>)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> cCtx.String(<span class="string">&quot;lang&quot;</span>) == <span class="string">&quot;spanish&quot;</span> &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;Hola&quot;</span>, name)</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;Hello&quot;</span>, name)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sort.Sort(cli.FlagsByName(app.Flags)) <span class="comment">// 将flag按照字母顺序排序，否则按定义的顺序排序</span></span><br><span class="line">	sort.Sort(cli.CommandsByName(app.Commands))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := app.Run(os.Args); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h3 id="Args-and-Flags"><a href="#Args-and-Flags" class="headerlink" title="Args and Flags"></a>Args and Flags</h3><ul>
 <li><p>在上述代码中，定义了两个 flag，用 <code>--lang</code>、<code>--config</code> 进行调用，或者用简写 <code>-l</code>、<code>-c</code></p>
@@ -321,7 +321,7 @@
 </ul>
 </li>
 </ul>
-</br>
+<br>
 
 <h3 id="Subcommands"><a href="#Subcommands" class="headerlink" title="Subcommands"></a>Subcommands</h3><ul>
 <li>用户可以给已有的命令添加子命令</li>
@@ -329,7 +329,7 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;github.com/urfave/cli/v2&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	app := &amp;cli.App&#123;</span><br><span class="line">		Commands: []*cli.Command&#123;</span><br><span class="line">			&#123;</span><br><span class="line">				Name:    <span class="string">&quot;add&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;a&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;add a task to the list&quot;</span>,</span><br><span class="line">				Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;added task: &quot;</span>, cCtx.Args().First())</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				Name:    <span class="string">&quot;complete&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;c&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;complete a task on the list&quot;</span>,</span><br><span class="line">				Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;completed task: &quot;</span>, cCtx.Args().First())</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				Name:    <span class="string">&quot;template&quot;</span>,</span><br><span class="line">				Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;t&quot;</span>&#125;,</span><br><span class="line">				Usage:   <span class="string">&quot;options for task templates&quot;</span>,</span><br><span class="line">				Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;template task: &quot;</span>, cCtx.Args().First())</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">				&#125;,</span><br><span class="line">				Subcommands: []*cli.Command&#123;</span><br><span class="line">					&#123;</span><br><span class="line">						Name:    <span class="string">&quot;add&quot;</span>,</span><br><span class="line">						Usage:   <span class="string">&quot;add a new template&quot;</span>,</span><br><span class="line">						Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;a&quot;</span>&#125;,</span><br><span class="line">						Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">							fmt.Println(<span class="string">&quot;new task template: &quot;</span>, cCtx.Args().First())</span><br><span class="line">							<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">						&#125;,</span><br><span class="line">					&#125;,</span><br><span class="line">					&#123;</span><br><span class="line">						Name:    <span class="string">&quot;remove&quot;</span>,</span><br><span class="line">						Usage:   <span class="string">&quot;remove an existing template&quot;</span>,</span><br><span class="line">						Aliases: []<span class="type">string</span>&#123;<span class="string">&quot;r&quot;</span>&#125;,</span><br><span class="line">						Action: <span class="function"><span class="keyword">func</span><span class="params">(cCtx *cli.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">							fmt.Println(<span class="string">&quot;removed task template: &quot;</span>, cCtx.Args().First())</span><br><span class="line">							<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">						&#125;,</span><br><span class="line">					&#125;,</span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := app.Run(os.Args); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h3 id="Add-Flags-for-Commands"><a href="#Add-Flags-for-Commands" class="headerlink" title="Add Flags for Commands"></a>Add Flags for Commands</h3><ul>
 <li>给已有命令添加标志。在结构体中增加 <code>Flag</code> 字段，<code>Flag</code> 也是一个结构体。</li>
@@ -339,10 +339,10 @@
 <ul>
 <li>下面几种调用方式。主要说一下后面两种。在有多个 Bool 类型的标志位时，可以同一个非 Bool 类型的标志位一起使用，即共有一个 <code>-</code>。若有多个非 Bool 类型的标志位，则剩余的非 Bool 类型标志位按常规方式使用。</li>
 </ul>
-<p><img src="/image-20220724162010382.png" alt="image-20220724162010382"></p>
-</br>
+<p><img src="/.com//image-20220724162010382.png" alt="image-20220724162010382"></p>
+<br>
 
-</br>
+<br>
 
 <h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
     
@@ -710,19 +710,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -731,6 +723,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">problem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

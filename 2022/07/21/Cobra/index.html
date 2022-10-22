@@ -17,14 +17,14 @@
 <meta property="og:site_name" content="谷安的blog">
 <meta property="og:description" content="Overview Cobra 是一个用于创建功能强大的现代 CLI 应用程序的库。‎  Cobra 用于许多Go项目，如 ‎‎Kubernetes‎‎，‎‎Hugo‎‎ 和‎‎ GitHub CLI‎‎ 等。  ‎Cobra 是一个库，它提供了一个简单的界面来创建类似于 git&amp;go 工具的强大现代 CLI 界面。‎">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/image-20220721233614251.png">
-<meta property="og:image" content="http://example.com/image-20220721233731209.png">
-<meta property="og:image" content="http://example.com/image-20220721234525243.png">
-<meta property="og:image" content="http://example.com/image-20220721234625776.png">
-<meta property="og:image" content="http://example.com/image-20220721235303239.png">
-<meta property="og:image" content="http://example.com/image-20220721235921973.png">
-<meta property="og:image" content="http://example.com/image-20220721235943918.png">
-<meta property="og:image" content="http://example.com/image-20220722000354121.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721233614251.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721233731209.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721234525243.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721234625776.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721235303239.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721235921973.png">
+<meta property="og:image" content="http://example.com/.com//image-20220721235943918.png">
+<meta property="og:image" content="http://example.com/.com//image-20220722000354121.png">
 <meta property="article:published_time" content="2022-07-21T14:29:57.000Z">
 <meta property="article:modified_time" content="2022-07-24T09:02:27.839Z">
 <meta property="article:author" content="谷安">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="命令行工具">
 <meta property="article:tag" content="Cobra">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/image-20220721233614251.png">
+<meta name="twitter:image" content="http://example.com/.com//image-20220721233614251.png">
   
     <link rel="alternative" href="/atom.xml" title="谷安的blog" type="application/atom+xml">
   
@@ -287,7 +287,7 @@
 </li>
 </ul>
 <p><em><span id="more"></span></em></p>
-</br>
+<br>
 
 <h3 id="Installing"><a href="#Installing" class="headerlink" title="Installing"></a>Installing</h3><ul>
 <li>终端输入以下命令，请确保你已安装了 Go</li>
@@ -299,14 +299,14 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;github.com/spf13/cobra&quot;</span></span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><ul>
 <li>Cobra-cli 是一个命令行程序，用于生成 cobra 应用程序和命令文件。它将引导您的应用程序脚手架以快速开发基于 Cobra 的应用程序。这是将 Cobra 合并到应用程序中的最简单方法。</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go install github.com/spf13/cobra-cli@latest</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h3 id="Cobra-Generator"><a href="#Cobra-Generator" class="headerlink" title="Cobra Generator"></a>Cobra Generator</h3><ul>
 <li><p>Cobra 提供了自己的程序，可以创建您的应用程序并添加您想要的任何命令。这是将 Cobra 合并到应用程序中的最简单方法。</p>
@@ -314,29 +314,29 @@
 <li><p>Cobra Generator 目前只支持两种操作</p>
 </li>
 </ul>
-</br>
+<br>
 
 <h4 id="cobra-cli-init"><a href="#cobra-cli-init" class="headerlink" title="cobra-cli init"></a>cobra-cli init</h4><h5 id="Initalizing-a-module"><a href="#Initalizing-a-module" class="headerlink" title="Initalizing a module"></a>Initalizing a module</h5><ul>
 <li><code>Cobra-cli init [ app ]</code> 命令将为您创建初始应用程序代码。</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$PATH</span>/src</span><br><span class="line"><span class="built_in">mkdir</span> myApp</span><br><span class="line"><span class="built_in">cd</span> myApp</span><br><span class="line">go mod init myApp</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h5 id="Initalizing-a-Cobra-CLI-application"><a href="#Initalizing-a-Cobra-CLI-application" class="headerlink" title="Initalizing a Cobra CLI application"></a>Initalizing a Cobra CLI application</h5><ul>
 <li>在 Go 模块中运行 <code>cobra-cli init</code>。这将创建一个新的框架项目供您编辑。</li>
 <li>此时目录结构为</li>
 </ul>
-<p><img src="/image-20220721233614251.png" alt="image-20220721233614251"></p>
+<p><img src="/.com//image-20220721233614251.png" alt="image-20220721233614251"></p>
 <ul>
 <li>运行 main.go</li>
 </ul>
-<p><img src="/image-20220721233731209.png" alt="image-20220721233731209"></p>
+<p><img src="/.com//image-20220721233731209.png" alt="image-20220721233731209"></p>
 <ul>
 <li>查看 main.go 中的内容。第二段 Copyright 后面的内容是可以通过参数进行统一修改的，下面马上会讲</li>
 </ul>
-<p><img src="/image-20220721234525243.png" alt="image-20220721234525243"></p>
-</br>
+<p><img src="/.com//image-20220721234525243.png" alt="image-20220721234525243"></p>
+<br>
 
 <h5 id="Optional-flags"><a href="#Optional-flags" class="headerlink" title="Optional flags"></a>Optional flags</h5><ul>
 <li>使用 <code>cobra-cli init</code> 初始化时，可以提供你的名字和邮箱，以及许可证</li>
@@ -346,8 +346,8 @@
 <ul>
 <li>再次查看 main.go 中的内容，可以发现 Copyright 后面的内容已经被修改成你提供的名字跟邮箱了</li>
 </ul>
-<p><img src="/image-20220721234625776.png" alt="image-20220721234625776"></p>
-</br>
+<p><img src="/.com//image-20220721234625776.png" alt="image-20220721234625776"></p>
+<br>
 
 <h4 id="Add-commands-to-a-project"><a href="#Add-commands-to-a-project" class="headerlink" title="Add commands to a project"></a>Add commands to a project</h4><ul>
 <li>你可以使用 <code>cobra-cli add</code> 为你的应用添加其他命令</li>
@@ -357,21 +357,21 @@
 <ul>
 <li>这会在 cmd 目录下增加三个 go 文件</li>
 </ul>
-<p><img src="/image-20220721235303239.png" alt="image-20220721235303239"></p>
+<p><img src="/.com//image-20220721235303239.png" alt="image-20220721235303239"></p>
 <ul>
 <li>其中 -p 表示将 create 命令分配给 config 命令(也就是 config 命令是 create 的父命令)。如果未指定父命令，则 rootCmd 默认为所有命令的父命令。</li>
 <li>现在你可以通过如下命令来运行你的程序</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">go run main.go</span><br><span class="line">go run main.go serve</span><br><span class="line">go run main.go config</span><br><span class="line">go run main.go config create</span><br><span class="line">go run main.go <span class="built_in">help</span> serve</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image-20220721235921973.png" alt="image-20220721235921973"></p>
-<p><img src="/image-20220721235943918.png" alt="image-20220721235943918"></p>
+<p><img src="/.com//image-20220721235921973.png" alt="image-20220721235921973"></p>
+<p><img src="/.com//image-20220721235943918.png" alt="image-20220721235943918"></p>
 <ul>
 <li>也可以使用 <code>go build</code> 编译生成二进制文件，通过二进制文件加参数来运行程序</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">go build</span><br><span class="line">./myApp</span><br><span class="line">./myApp serve</span><br><span class="line">./myApp config</span><br><span class="line">./myApp config create</span><br><span class="line">./myApp <span class="built_in">help</span> serve</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image-20220722000354121.png" alt="image-20220722000354121"></p>
+<p><img src="/.com//image-20220722000354121.png" alt="image-20220722000354121"></p>
 <ul>
 <li>也可以在代码中对命令进行添加、修改等。比如使用命令 <code>cobra-cli add myCli</code> 之后，会在 cmd 目录下自动生成 myCli.go 文件</li>
 <li>查看 myCli.go 的内容</li>
@@ -384,7 +384,7 @@
 <li><p>再看看最后一行代码，表示将 rootCmd 父命令赋给 myCliCmd。还记得我们在前面说过，通过 <code>cobra-cli add</code> 添加命令时，如果没有 -p 参数，那就默认其父命令时 rootCmd，原因就是自动生成的代码中的这段代码。我们也可以通过修改这段代码，将其他父命令赋给 myCliCmd。比如将 serve 父命令赋给 myCliCmd，将代码修改为 <code>serveCmd.AddCommand(myCliCmd)</code> 即可，在使用时应该是 <code>./myApp serve myCli</code> 或者 <code>go run main.go serve myCli</code>。</p>
 </li>
 </ul>
-</br>
+<br>
 
 <h4 id="Working-with-Flags"><a href="#Working-with-Flags" class="headerlink" title="Working with Flags"></a>Working with Flags</h4><ul>
 <li><p>flag 就是符号 “-” 加一个字母，或者符号 “–” 加一串字母。比如前面提到的命令 <code>cobra-cli add create -p configCmd</code> 中的 -p 就是一个 flag。</p>
@@ -399,14 +399,14 @@
 <ul>
 <li>有两种不同的方法来分配 flag</li>
 </ul>
-</br>
+<br>
 
 <h5 id="Persistent-Flags"><a href="#Persistent-Flags" class="headerlink" title="Persistent Flags"></a>Persistent Flags</h5><ul>
 <li>flag 可以是“持久的”，这意味着此 flag 将可用于它所分配到的命令以及该命令下的每个命令。对于全局 flage，将 flag 指定为根上的永久标志。‎</li>
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rootCmd.PersistentFlags().BoolVarP(&amp;Verbose, <span class="string">&quot;verbose&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="literal">false</span>, <span class="string">&quot;verbose output&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h5 id="Local-Flags"><a href="#Local-Flags" class="headerlink" title="Local Flags"></a>Local Flags</h5><ul>
 <li>也可以在本地分配 flag，该 flag 仅适用于该特定命令。‎</li>
@@ -418,14 +418,14 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">versionCmd.Flags().StringP(<span class="string">&quot;heroes&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;IronMan&quot;</span>, <span class="string">&quot;./app version -r yourHeroes&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h5 id="父命令上的本地标志"><a href="#父命令上的本地标志" class="headerlink" title="父命令上的本地标志"></a>父命令上的本地标志</h5><ul>
 <li>‎默认情况下，Cobra 仅解析目标命令上的本地标志，父命令上的任何本地标志都将被忽略‎。通过开启 <code>Command.TraverseChildren</code> ，Cobra 将在执行目标命令之前解析每个命令上的本地标志。‎</li>
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">command := cobra.Command&#123;</span><br><span class="line">  Use: <span class="string">&quot;print [OPTIONS] [COMMANDS]&quot;</span>,</span><br><span class="line">  TraverseChildren: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h5 id="必须的标志"><a href="#必须的标志" class="headerlink" title="必须的标志"></a>必须的标志</h5><ul>
 <li>‎默认情况下，标志是可选的。相反，如果您希望命令在未设置标志时报告错误，请根据需要将其标记为：‎</li>
@@ -437,7 +437,7 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rootCmd.PersistentFlags().StringVarP(&amp;Region, <span class="string">&quot;region&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;&quot;</span>, <span class="string">&quot;AWS region (required)&quot;</span>)</span><br><span class="line">rootCmd.MarkPersistentFlagRequired(<span class="string">&quot;region&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h5 id="标记组"><a href="#标记组" class="headerlink" title="标记组"></a>标记组</h5><ul>
 <li>如果必须同时提供不同的标志(比如，提供—— username 标志的同时也要提供—— password 标志) ，那么 Cobra 可以强制执行这一要求</li>
@@ -467,7 +467,7 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;fmt&quot;</span></span><br><span class="line">    <span class="string">&quot;strings&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;github.com/spf13/cobra&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> echoTimes <span class="type">int</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> cmdPrint = &amp;cobra.Command&#123;</span><br><span class="line">        Use:   <span class="string">&quot;print [string to print]&quot;</span>,</span><br><span class="line">        Short: <span class="string">&quot;Print anything to the screen&quot;</span>,</span><br><span class="line">        Long: <span class="string">`print is for printing anything back to the screen.</span></span><br><span class="line"><span class="string">For many years people have printed back to the screen.`</span>,</span><br><span class="line">        Args: cobra.MinimumNArgs(<span class="number">1</span>),</span><br><span class="line">        Run: <span class="function"><span class="keyword">func</span><span class="params">(cmd *cobra.Command, args []<span class="type">string</span>)</span></span> &#123;</span><br><span class="line">            fmt.Println(<span class="string">&quot;Print: &quot;</span> + strings.Join(args, <span class="string">&quot; &quot;</span>))</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> cmdEcho = &amp;cobra.Command&#123;</span><br><span class="line">        Use:   <span class="string">&quot;echo [string to echo]&quot;</span>,</span><br><span class="line">        Short: <span class="string">&quot;Echo anything to the screen&quot;</span>,</span><br><span class="line">        Long: <span class="string">`echo is for echoing anything back.</span></span><br><span class="line"><span class="string">Echo works a lot like print, except it has a child command.`</span>,</span><br><span class="line">        Args: cobra.MinimumNArgs(<span class="number">1</span>),</span><br><span class="line">        Run: <span class="function"><span class="keyword">func</span><span class="params">(cmd *cobra.Command, args []<span class="type">string</span>)</span></span> &#123;</span><br><span class="line">            fmt.Println(<span class="string">&quot;Echo: &quot;</span> + strings.Join(args, <span class="string">&quot; &quot;</span>))</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> cmdTimes = &amp;cobra.Command&#123;</span><br><span class="line">        Use:   <span class="string">&quot;times [string to echo]&quot;</span>,</span><br><span class="line">        Short: <span class="string">&quot;Echo anything to the screen more times&quot;</span>,</span><br><span class="line">        Long: <span class="string">`echo things multiple times back to the user by providing</span></span><br><span class="line"><span class="string">a count and a string.`</span>,</span><br><span class="line">        Args: cobra.MinimumNArgs(<span class="number">1</span>),</span><br><span class="line">        Run: <span class="function"><span class="keyword">func</span><span class="params">(cmd *cobra.Command, args []<span class="type">string</span>)</span></span> &#123;</span><br><span class="line">            <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; echoTimes; i++ &#123;</span><br><span class="line">                fmt.Println(<span class="string">&quot;Echo: &quot;</span> + strings.Join(args, <span class="string">&quot; &quot;</span>))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 给cmdTimes定义一个flag，默认值是1</span></span><br><span class="line">    cmdTimes.Flags().IntVarP(&amp;echoTimes, <span class="string">&quot;times&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="number">1</span>, <span class="string">&quot;times to echo the input&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> rootCmd = &amp;cobra.Command&#123;Use: <span class="string">&quot;app&quot;</span>&#125;</span><br><span class="line">    rootCmd.AddCommand(cmdPrint, cmdEcho)	<span class="comment">// 将rootCmd父命令赋给cmdPrint和cmdEcho</span></span><br><span class="line">    cmdEcho.AddCommand(cmdTimes)	<span class="comment">// 将cmdEcho父命令赋给cmdTimes</span></span><br><span class="line">    rootCmd.Execute()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 <h4 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h4><ul>
 <li><code>PersistentPreRun</code></li>
@@ -487,7 +487,7 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Inside rootCmd PersistentPreRun with args: []</span><br><span class="line">Inside rootCmd PreRun with args: []</span><br><span class="line">Inside rootCmd Run with args: []</span><br><span class="line">Inside rootCmd PostRun with args: []</span><br><span class="line">Inside rootCmd PersistentPostRun with args: []</span><br><span class="line"></span><br><span class="line">Inside rootCmd PersistentPreRun with args: [arg1 arg2]</span><br><span class="line">Inside subCmd PreRun with args: [arg1 arg2]</span><br><span class="line">Inside subCmd Run with args: [arg1 arg2]</span><br><span class="line">Inside subCmd PostRun with args: [arg1 arg2]</span><br><span class="line">Inside subCmd PersistentPostRun with args: [arg1 arg2]</span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
 
 
@@ -498,9 +498,9 @@
 </ul>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">command.DisableSuggestions = <span class="literal">true</span></span><br><span class="line">command.SuggestionsMinimumDistance = <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-</br>
+<br>
 
-</br>
+<br>
 
 <h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3>
     
@@ -868,19 +868,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -889,6 +881,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">problem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>
