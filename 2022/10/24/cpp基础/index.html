@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>some problems with hexo | 谷安的blog</title>
+  <title>cpp基础 | 谷安的blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="写在前面 记录使用 hexo 过程中遇到的一些问题">
+  <meta name="description" content="Overview 一些关于 cpp 的基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="some problems with hexo">
-<meta property="og:url" content="http://example.com/2022/09/20/some-problems-with-hexo/index.html">
+<meta property="og:title" content="cpp基础">
+<meta property="og:url" content="http://example.com/2022/10/24/cpp%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="谷安的blog">
-<meta property="og:description" content="写在前面 记录使用 hexo 过程中遇到的一些问题">
+<meta property="og:description" content="Overview 一些关于 cpp 的基础知识">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-09-20T02:24:58.000Z">
-<meta property="article:modified_time" content="2022-10-13T11:28:46.700Z">
+<meta property="article:published_time" content="2022-10-24T07:44:59.000Z">
+<meta property="article:modified_time" content="2022-10-24T09:18:20.508Z">
 <meta property="article:author" content="谷安">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="problem">
+<meta property="article:tag" content="cpp">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="谷安的blog" type="application/atom+xml">
@@ -215,14 +214,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-some-problems-with-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cpp基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      some problems with hexo
+      cpp基础
     </h1>
   
 
@@ -234,8 +233,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/09/20/some-problems-with-hexo/" class="archive-article-date">
-        <time datetime="2022-09-20T02:24:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
+<a href="/2022/10/24/cpp%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+        <time datetime="2022-10-24T07:44:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-24</time>
 </a>
 
   
@@ -248,7 +247,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">326字</span>
+      <span class="post-count">3k字</span>
     </span>
   </span>
 
@@ -257,7 +256,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">11分</span>
     </span>
   </span>
 </div>
@@ -268,42 +267,157 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <br>
-
-<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><ul>
-<li>记录使用 <code>hexo</code> 过程中遇到的一些问题</li>
+    <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><ul>
+<li>一些关于 <code>cpp</code> 的基础知识</li>
 </ul>
-<p><em><span id="more"></span></em></p>
-<h3 id="Question-1-Spawn-failed"><a href="#Question-1-Spawn-failed" class="headerlink" title="Question 1(Spawn failed)"></a>Question 1(Spawn failed)</h3><ul>
-<li><p>问题报错如下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/usr/local/src/hexo/hanyubolg/node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (events.js:376:20)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 
 <br>
-</li>
-<li><p>解决方案一</p>
-<ul>
-<li><p>首先进入本地的博客文件夹根目录，找到并删除 <code>.delpoy_git</code> 文件夹</p>
-</li>
-<li><p>执行以下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.autocrlf false</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 最后执行，检查问题是否解决</span></span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>解决方案二</p>
-<ul>
-<li>我在使用过方案一之后，又出现了一样的报错，然后方案一失效了。百度、谷歌了一堆方法都没有用。直到我<strong>用手机给电脑开热点</strong>，成功了。。</li>
-</ul>
-</li>
-<li><p>解决方案三</p>
-<ul>
-<li><p>打开命令行输入 <code>ssh -T git@github.com</code>，如果报错 <code>ssh: connect to host github.com port 22: Connection timed out</code>。首先找到 <code>.ssh</code> 文件夹，打开看其中是否有 <code>config</code> 文件，如果没有则新建一个，<code>windows</code> 用记事本打开编辑写入以下代码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User GitHub用户名</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>命令行再次输入 <code>ssh -T git@github.com</code>，出现提示，输入 <code>yes</code> 即可。</p>
-</li>
-</ul>
-</li>
-</ul>
 
+<h3 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h3><p>智能指针是一个类，这个类的构造函数中传入一个普通指针，析构函数中释放传入的指针。当超出了类的作用域时，比如函数或者程序结束时，类会自动调用析构函数，析构函数会自动释放资源。所以智能指针的作用原理就是在函数结束时自动释放内存空间，不需要手动释放内存空间。</p>
+<br>
+
+<h3 id="常用的智能指针"><a href="#常用的智能指针" class="headerlink" title="常用的智能指针"></a>常用的智能指针</h3><ul>
+<li><p><code>std::auto_ptr</code>，有很多问题。 不支持复制（拷贝构造函数）和赋值（operator &#x3D;），但复制或赋值的时候不会提示出错。因为不能被复制，所以不能被放入容器中。</p>
+</li>
+<li><p><code>C++11</code> 引入的 <code>unique_ptr</code>， 也不支持复制和赋值，但比 <code>auto_ptr</code> 好，直接赋值会编译出错。实在想赋值的话，需要使用： <code>std::move</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::unique_ptr&lt;<span class="type">int</span>&gt; <span class="title">p1</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span>(<span class="number">5</span>))</span></span>;</span><br><span class="line">std::unique_ptr&lt;<span class="type">int</span>&gt; p2 = p1; <span class="comment">// 编译会出错</span></span><br><span class="line">std::unique_ptr&lt;<span class="type">int</span>&gt; p3 = std::<span class="built_in">move</span>(p1); <span class="comment">// 转移所有权, 现在那块内存归p3所有, p1成为无效的指针.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>C++11</code> 或 <code>boost</code> 的 <code>shared_ptr</code>，基于引用计数的智能指针。可随意赋值，直到内存的引用计数为0的时候这个内存会被释放。</p>
+</li>
+<li><p><code>C++11</code> 或 <code>boost</code> 的 <code>weak_ptr</code>，弱引用。 引用计数有一个问题就是互相引用形成环，这样两个指针指向的内存都无法释放。需要手动打破循环引用或使用 <code>weak_ptr</code>。顾名思义，<code>weak_ptr</code> 是一个弱引用，只引用，不计数。如果一块内存被 <code>shared_ptr</code> 和 <code>weak_ptr</code> 同时引用，当所有 <code>shared_ptr</code> 析构了之后，不管还有没有 <code>weak_ptr</code> 引用该内存，内存也会被释放。所以 <code>weak_ptr</code> 不保证它指向的内存一定是有效的，在使用之前需要检查 <code>weak_ptr</code> 是否为空指针。</p>
+</li>
+</ul>
+<br>
+
+<h3 id="define-和-const-区别"><a href="#define-和-const-区别" class="headerlink" title="define 和 const 区别"></a>define 和 const 区别</h3><ul>
+<li>对于 <code>define</code>，宏定义是在预编译阶段进行处理，没有类型，没有类型检查，运行时系统不会为其分配内存. 从汇编 的角度来讲，define 却以立即数的方式保留了多份数据的拷贝。</li>
+<li>对于 <code>const</code>，在编译期间进行处理的，也类型和类型检查，程序运行时系统会为 <code>const</code> 常量分配内存. 从汇编的角度讲，<code>const</code> 常量在出现的地方保留的是真正数据的内存地址，只保留了一份数据的拷贝，省去了不必要的内存空间。而且，有时编译器不会为普通的 <code>const</code> 常量分配内存，而是直接将 <code>const</code> 常量添加到符号表中，省去了读取和写入内存的操作，效率更高。</li>
+</ul>
+<br>
+
+<h3 id="动态链接和静态链接区别"><a href="#动态链接和静态链接区别" class="headerlink" title="动态链接和静态链接区别"></a>动态链接和静态链接区别</h3><ul>
+<li><p>都是共享代码的方式</p>
+</li>
+<li><p>静态连接库就是把 (lib) 文件中用到的函数代码直接链接进目标程序，程序运行的时候不再需要其它的库文件, ib 中的指令都全部被直接包含在最终生成的 EXE 文件中了。</p>
+</li>
+<li><p>动态链接就是把调用的函数所在文件模块（DLL）和调用函数在文件中的位置等信息链接进目标程序，程序运行的时候再从 DLL 中寻找相应函数代码，因此需要相应 DLL 文件的支持. 若使用 DLL，该 DLL 不必被包含在最终 EXE 文件中，EXE 文件执行时可以“动态”地引用和卸载这个与 EXE 独立的 DLL 文件</p>
+</li>
+<li><p>区别</p>
+<ul>
+<li><p>静态链接库中不能再包含其他的动态链接库或者静态库</p>
+</li>
+<li><p>动态链接库中还可以再包含其他的动态或静态链接库。</p>
+</li>
+<li><p>动态库就是在需要调用其中的函数时，根据函数映射表找到该函数然后调入堆栈执行。如果在当前工程中有多处对dll文件中同一个函数的调用，那么执行时，这个函数只会留下一份拷贝。</p>
+</li>
+<li><p>但如果有多处对 lib 文件中同一个函数的调用，那么执行时该函数将在当前程序的执行空间里留下多份拷贝，而且是一处调用就产生一份拷贝。</p>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="析构函数一般写成虚函数的原因"><a href="#析构函数一般写成虚函数的原因" class="headerlink" title="析构函数一般写成虚函数的原因"></a>析构函数一般写成虚函数的原因</h3><ul>
+<li><p>降低内存泄漏的可能性. 一个基类的指针指向一个派生类的对象时, 在使用完毕准备销毁时, 如果基类的析构函数没有定义成虚函数, 那么编译器根据指针类型就会认为当前对象的类型是基类，调用基类的析构函数 （该对象的析构函数的函数地址早就被绑定为基类的析构函数），仅执行基类的析构，派生类的自身内容将无法被析构，造成内存泄漏。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Parent</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;create parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Parent</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;delete parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;I&#x27;m parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Children</span> : <span class="keyword">public</span> Parent &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Children</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;create children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Children</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;delete children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;I&#x27;m children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Parent *p = <span class="keyword">new</span> Children;</span><br><span class="line">    p-&gt;<span class="built_in">Speak</span>();</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Output:</span></span><br><span class="line"><span class="comment">// create parent</span></span><br><span class="line"><span class="comment">// create children</span></span><br><span class="line"><span class="comment">// I&#x27;m parent</span></span><br><span class="line"><span class="comment">// delete parent</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 会发现没有指向children类的析构函数,并且调用的是Parent中的Speak函数 </span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>如果基类的析构函数定义成虚函数，那么编译器就可以根据实际对象，执行派生类的析构函数，再执行基类的析构函数，成功释放内存。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI <span class="string">&quot;3.14159&quot;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Parent</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;create parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">Parent</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;delete parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">Speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;I&#x27;m parent&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Children</span> : <span class="keyword">public</span> Parent &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Children</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;create children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Children</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;delete children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;I&#x27;m children&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Parent *p = <span class="keyword">new</span> Children;</span><br><span class="line">    p-&gt;<span class="built_in">Speak</span>();</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Output:</span></span><br><span class="line"><span class="comment">// create parent</span></span><br><span class="line"><span class="comment">// create children</span></span><br><span class="line"><span class="comment">// I&#x27;m children</span></span><br><span class="line"><span class="comment">// delete children</span></span><br><span class="line"><span class="comment">// delete parent</span></span><br></pre></td></tr></table></figure>
+
+<br></li>
+</ul>
+<h3 id="new-x2F-delete-，malloc-x2F-free-区别"><a href="#new-x2F-delete-，malloc-x2F-free-区别" class="headerlink" title="new &#x2F; delete ，malloc &#x2F; free 区别"></a>new &#x2F; delete ，malloc &#x2F; free 区别</h3><ul>
+<li><p>都可以用来在堆上分配和回收空间。<code>new / delete</code> 是操作符，<code>malloc / free</code> 是库函数</p>
+</li>
+<li><p><strong>执行 new 实际上执行两个过程</strong></p>
+<ul>
+<li>分配未初始化的内存空间 <code>malloc</code> <ul>
+<li>如果在第一步分配空间中出现问题，则抛出 <code>std::bad_alloc</code> 异常，或被某个设定的异常处理函数捕获处理；</li>
+</ul>
+</li>
+<li>使用对象的构造函数对空间进行初始化；返回空间的首地址。<ul>
+<li>如果在第二步构造对象时出现异常，则自动调用 <code>delete</code> 释放内存。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>执行 delete 实际上也有两个过程</strong></p>
+<ul>
+<li>使用析构函数对对象进行析构</li>
+<li>回收内存空间 <code>free</code></li>
+</ul>
+</li>
+<li><p>以上也可以看出 <code>new</code> 和 <code>malloc</code> 的区别，<code>new</code> 得到的是经过初始化的空间，而 <code>malloc</code> 得到的是未初始化的空间。所以 <code>new</code> 是 <code>new</code> 一个类型，而 <code>malloc</code> 则是 <code>malloc</code> 一个字节长度的空间。<code>delete</code> 和 <code>free</code> 同理，<code>delete</code> 不仅释放空间还析构对象，delete 一个类型，<code>free</code> 一个字节长度的空间。</p>
+</li>
+<li><p><strong>为什么有了 malloc／free 还需要 new／delete？</strong> </p>
+<ul>
+<li>因为对于非内部数据类型而言，光用 <code>malloc／free</code> 无法满足动态对象的要求。对象在创建的同时需要自动执行构造函数，对象在消亡以前要自动执行析构函数。由于 <code>malloc／free</code> 是库函数而不是运算符，不在编译器控制权限之内，不能够把执行的构造函数和析构函数的任务强加于 <code>malloc／free</code>，所以有了 <code>new／delete</code> 操作符。</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="C-和-Java-区别"><a href="#C-和-Java-区别" class="headerlink" title="C++ 和 Java 区别"></a>C++ 和 Java 区别</h3><ul>
+<li><p><strong>指针</strong>:	Java 语言让程序员没法找到指针来直接访问内存，没有指针的概念，并有内存的自动管理功能，从而有效的防止了 C++ 语言中的指针操作失误的影响。但并非 Java 中没有指针，Java 虚拟机内部中还是用了指针，保证了 Java 程序的安全。</p>
+</li>
+<li><p><strong>多重继承</strong>:	C++ 支持多重继承但 Java 不支持，但支持一个类继承多个接口，实现 C++ 中多重继承的功能，又避免了 C++ 的多重继承带来的不便。</p>
+</li>
+<li><p><strong>数据类型和类:</strong>	Java 是完全面向对象的语言，所有的函数和变量必须是类的一部分。除了基本数据类型之外，其余的都作为类对象，对象将数据和方法结合起来，把它们封装在类中，这样每个对象都可以实现自己的特点和行为。Java 中取消了 C++ 中的 <code>struct </code>和 <code>union </code>。</p>
+</li>
+<li><p><strong>自动内存管理：</strong></p>
+<ul>
+<li>Java 程序中所有对象都是用 new 操作符建立在内存堆栈上，Java 自动进行无用内存回收操作，不需要程序员进行手动删除。而 C++ 中必须由程序员释放内存资源，增加了程序设计者的负担。Java 中当一个对象不再被用到时， 无用内存回收器将给他们加上标签。Java 里无用内存回收程序是以线程方式在后台运行的，利用空闲时间工作来删除。</li>
+<li>Java 不支持操作符重载。操作符重载被认为是 C++ 的突出特性。</li>
+<li>Java 不支持预处理功能。C++ 在编译过程中都有一个预编译阶段，Java 没有预处理器，但它提供了 <code>import</code> 与 C++ 预处理器具有类似功能。</li>
+</ul>
+</li>
+<li><p><strong>类型转换：</strong>C++ 中有数据类型隐含转换的机制，Java 中需要限时强制类型转换。</p>
+</li>
+<li><p><strong>字符串：</strong></p>
+<ul>
+<li>C++中字符串是以 <code>Null</code> 终止符代表字符串的结束，而 Java 的字符串 是用类对象（<code>string</code> 和 <code>stringBuffer</code>）来实现的。</li>
+<li>Java 中不提供 <code>goto </code>语句，虽然指定 <code>goto </code>作为关键字，但不支持它的使用，使程序简洁易读。</li>
+<li>Java 的异常机制用于捕获例外事件，增强系统容错能力。</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="内存泄漏的定义，如何检测与避免？"><a href="#内存泄漏的定义，如何检测与避免？" class="headerlink" title="内存泄漏的定义，如何检测与避免？"></a>内存泄漏的定义，如何检测与避免？</h3><ul>
+<li><strong>定义</strong>：内存泄漏简单的说就是申请了一块内存空间，使用完毕后没有释放掉。 它的一般表现方式是程序运行时间越长，占用内存越多，最终用尽全部内存，整个系统崩溃。由程序申请的一块内存，且没有任何一个指针指向它，那么这块内存就泄漏了。</li>
+<li><strong>如何检测内存泄漏</strong><ul>
+<li>首先可以通过观察猜测是否可能发生内存泄漏，Linux 中使用 swap 命令观察还有多少可用的交换空间，在一两分钟内键入该命令三到四次，看看可用的交换区是否在减少。</li>
+<li>还可以使用 其他一些 &#x2F;usr&#x2F;bin&#x2F;stat 工具如 netstat、vmstat 等。如发现波段有内存被分配且从不释放，一个可能的解释就是有个进程出现了内存泄漏。</li>
+<li>当然也有用于内存调试，内存泄漏检测以及性能分析的软件开发工具 valgrind 这样的工具来进行内存泄漏的检测。</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="什么情况下会调用拷贝构造函数-三种情况"><a href="#什么情况下会调用拷贝构造函数-三种情况" class="headerlink" title="什么情况下会调用拷贝构造函数(三种情况)"></a>什么情况下会调用拷贝构造函数(三种情况)</h3><ul>
+<li>类的对象需要拷贝时，拷贝构造函数将会被调用，以下的情况都会调用拷贝构造函数：<ul>
+<li>一个对象以值传递的方式传入函数体，需要拷贝构造函数创建一个临时对象压入到栈空间中。</li>
+<li>一个对象以值传递的方式从函数返回，需要执行拷贝构造函数创建一个临时对象作为返回值。</li>
+<li>一个对象需要通过另外一个对象进行初始化。</li>
+</ul>
+</li>
+</ul>
+<br>
+
+
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<h3 id="持续更新…"><a href="#持续更新…" class="headerlink" title="持续更新…"></a><strong>持续更新…</strong></h3>
     
 
     
@@ -349,7 +463,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://example.com/2022/09/20/some-problems-with-hexo/" title="some problems with hexo" target="_blank">http://example.com/2022/09/20/some-problems-with-hexo/</a>
+          <a href="http://example.com/2022/10/24/cpp基础/" title="cpp基础" target="_blank">http://example.com/2022/10/24/cpp基础/</a>
         </li>
         
         <li>
@@ -371,11 +485,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">problem</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpp</a>
         		</li>
       		
 		</ul>
@@ -431,7 +541,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/20/some-problems-with-hexo/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/10/24/cpp%E5%9F%BA%E7%A1%80/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -446,18 +556,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/10/24/cpp%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          cpp基础
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/24/Go-RoadMap/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Go_RoadMap</div>
+    <a href="/2022/09/20/some-problems-with-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">some problems with hexo</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -484,7 +585,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Question-1-Spawn-failed"><span class="toc-number">2.</span> <span class="toc-text">Question 1(Spawn failed)</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">2.</span> <span class="toc-text">智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">3.</span> <span class="toc-text">常用的智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#define-%E5%92%8C-const-%E5%8C%BA%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">define 和 const 区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%92%8C%E9%9D%99%E6%80%81%E9%93%BE%E6%8E%A5%E5%8C%BA%E5%88%AB"><span class="toc-number">5.</span> <span class="toc-text">动态链接和静态链接区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E4%B8%80%E8%88%AC%E5%86%99%E6%88%90%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">6.</span> <span class="toc-text">析构函数一般写成虚函数的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-x2F-delete-%EF%BC%8Cmalloc-x2F-free-%E5%8C%BA%E5%88%AB"><span class="toc-number">7.</span> <span class="toc-text">new &#x2F; delete ，malloc &#x2F; free 区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E5%92%8C-Java-%E5%8C%BA%E5%88%AB"><span class="toc-number">8.</span> <span class="toc-text">C++ 和 Java 区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%8C%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E4%B8%8E%E9%81%BF%E5%85%8D%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">内存泄漏的定义，如何检测与避免？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BC%9A%E8%B0%83%E7%94%A8%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E4%B8%89%E7%A7%8D%E6%83%85%E5%86%B5"><span class="toc-number">10.</span> <span class="toc-text">什么情况下会调用拷贝构造函数(三种情况)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E2%80%A6"><span class="toc-number">11.</span> <span class="toc-text">持续更新…</span></a></li></ol>
                     </div>
                 </span>
             </div>
