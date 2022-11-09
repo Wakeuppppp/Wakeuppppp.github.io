@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://example.com/2022/04/11/leetcode-Note/image-20220504145635296.png">
 <meta property="og:image" content="http://example.com/2022/04/11/leetcode-Note/image-20221109160042260.png">
 <meta property="article:published_time" content="2022-04-11T07:57:47.000Z">
-<meta property="article:modified_time" content="2022-11-09T13:36:32.745Z">
+<meta property="article:modified_time" content="2022-11-09T13:39:20.452Z">
 <meta property="article:author" content="谷安">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="algorithm">
@@ -1152,7 +1152,7 @@
 <br></li>
 </ul>
 <h4 id="摆动序列"><a href="#摆动序列" class="headerlink" title="摆动序列"></a><a href="https://leetcode.cn/problems/wiggle-subsequence/">摆动序列</a></h4><ul>
-<li><p>解法一:  摆动序列其实就是找峰值, 大\小于前一个数并且大\小于后一个数就是峰值.  峰值的数量加上2(首尾两个数),  就是摆动序列的长度.  但是要注意如果数组中有连续的重复数,  比如”3, 1, 1, 3”, 那么此时比较就会失败, 因为对于第一个”1”来讲, 它小于前一个数”2”, 但是不小于后一个数”1”, 所以它不是峰值, 同理第二个”1”也如此, 但是这样分析就会导致我们的结果漏掉了一个峰值.  为了避免类似情况发生, 先将数组”去重”.</p>
+<li><p>解法一:  摆动序列其实就是找峰值, 大\小于前一个数并且大\小于后一个数就是峰值.  峰值的数量加上2(首尾两个数),  就是摆动序列的长度.  但是要注意如果数组中有连续的重复数,  比如 $3, 1, 1, 3$, 那么此时比较就会失败, 因为对于第一个 $1$ 来讲, 它小于前一个数 $2$, 但是不小于后一个数 $1$, 所以它不是峰值, 同理第二个 $1$ 也如此, 但是这样分析就会导致我们的结果漏掉了一个峰值.  为了避免类似情况发生, 先将数组”去重”.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">wiggleMaxLength</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        path.<span class="built_in">push_back</span>(nums[<span class="number">0</span>]);</span><br><span class="line">        <span class="comment">// 去掉数组中连续的重复数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != nums[i - <span class="number">1</span>]) path.<span class="built_in">push_back</span>(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        n = path.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">2</span>) <span class="keyword">return</span> n;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((path[i] &gt; path[i - <span class="number">1</span>] &amp;&amp; path[i] &gt; path[i + <span class="number">1</span>]) || (path[i] &lt; path[i - <span class="number">1</span>] &amp;&amp; path[i] &lt; path[i + <span class="number">1</span>])) &#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <br></li>
@@ -1608,26 +1608,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">命令行工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Cli</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -1636,7 +1616,27 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Cli</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">命令行工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
               </li>
              
               <li class="article-tag-list-item">
