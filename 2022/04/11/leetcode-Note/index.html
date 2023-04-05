@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://example.com/2022/04/11/leetcode-Note/image-20221110195836502.png">
 <meta property="og:image" content="http://example.com/2022/04/11/leetcode-Note/image-20221115100517679.png">
 <meta property="article:published_time" content="2022-04-11T07:57:47.000Z">
-<meta property="article:modified_time" content="2022-11-18T13:47:43.604Z">
+<meta property="article:modified_time" content="2023-04-05T06:41:02.226Z">
 <meta property="article:author" content="谷安">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="algorithm">
@@ -257,7 +257,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">26.7k字</span>
+      <span class="post-count">26.9k字</span>
     </span>
   </span>
 
@@ -266,7 +266,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">141分</span>
+      <span class="post-count">142分</span>
     </span>
   </span>
 </div>
@@ -411,7 +411,7 @@
 </ul>
 <h4 id="两两交换链表中的节点"><a href="#两两交换链表中的节点" class="headerlink" title="两两交换链表中的节点"></a><a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/">两两交换链表中的节点</a></h4><ul>
 <li><p>使用虚拟头结点比较方便处理</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* virtualHead = <span class="keyword">new</span> ListNode;</span><br><span class="line">        virtualHead-&gt;next = head;</span><br><span class="line">        ListNode* cur = virtualHead;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next != <span class="literal">nullptr</span> &amp;&amp; cur-&gt;next-&gt;next != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            ListNode* thisNode = cur-&gt;next; <span class="comment">// 保存临时节点</span></span><br><span class="line">            ListNode* nextNode = cur-&gt;next-&gt;next-&gt;next; <span class="comment">// 保存临时节点</span></span><br><span class="line">			</span><br><span class="line">            <span class="comment">// 开始交换</span></span><br><span class="line">            cur-&gt;next = cur-&gt;next-&gt;next;</span><br><span class="line">            cur-&gt;next-&gt;next = thisNode;</span><br><span class="line">            cur-&gt;next-&gt;next-&gt;next = nextNode;</span><br><span class="line">			</span><br><span class="line">            <span class="comment">// 交换完成 更新cur位置</span></span><br><span class="line">            cur = cur-&gt;next-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> virtualHead-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* virtualHead = <span class="keyword">new</span> ListNode;</span><br><span class="line">        virtualHead-&gt;next = head;</span><br><span class="line">        ListNode* cur = virtualHead;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next != <span class="literal">nullptr</span> &amp;&amp; cur-&gt;next-&gt;next != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            ListNode* thisNode = cur-&gt;next; <span class="comment">// 保存临时节点</span></span><br><span class="line">            ListNode* nextNode = cur-&gt;next-&gt;next-&gt;next; <span class="comment">// 保存临时节点</span></span><br><span class="line">			</span><br><span class="line">            <span class="comment">// 开始交换</span></span><br><span class="line">            cur-&gt;next = cur-&gt;next-&gt;next;</span><br><span class="line">            cur-&gt;next-&gt;next = thisNode;</span><br><span class="line">            cur-&gt;next-&gt;next-&gt;next = nextNode;</span><br><span class="line">			</span><br><span class="line">            <span class="comment">// 交换完成 更新cur位置</span></span><br><span class="line">            cur = cur-&gt;next-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> virtualHead-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">func <span class="title">swapPairs</span><span class="params">(head *ListNode)</span> *ListNode </span>&#123;</span><br><span class="line">	dummyNode := &amp;ListNode&#123;Val: <span class="number">0</span>&#125;</span><br><span class="line">	dummyNode.Next = head</span><br><span class="line"></span><br><span class="line">	cur := head      <span class="comment">// 指向 欲交换节点对 的第一个节点, 比如a,b,c,d要交换节点b,c, 那么cur就指向节点b</span></span><br><span class="line">	pre := dummyNode <span class="comment">// 指向 欲交换节点对 的上一个节点, 比如a,b,c,d要交换节点b,c, 那么pre就指向节点b的上一个节点, 也就是节点a</span></span><br><span class="line">	<span class="comment">// 用 a-&gt;b-&gt;c-&gt;d-&gt;e-&gt;...举例, 将要交换b,c</span></span><br><span class="line">	<span class="comment">// 此时 cur指向b, pre指向a</span></span><br><span class="line">	<span class="keyword">for</span> cur != nil &amp;&amp; cur.Next != nil &#123;</span><br><span class="line">		next := cur.Next.Next <span class="comment">// ① next指向d</span></span><br><span class="line">		pre.Next = cur.Next   <span class="comment">// ② pre后接节点c, a-&gt;c-&gt;d-&gt;e-&gt;...  b-&gt;c</span></span><br><span class="line">		cur.Next.Next = cur   <span class="comment">// ③ 更新cur节点, 指向节点b, a-&gt;b&lt;-&gt;c  d-&gt;e-&gt;...</span></span><br><span class="line">		cur.Next = next       <span class="comment">// ④ b后接节点d, a-&gt;c-&gt;b-&gt;d-&gt;e-&gt;...</span></span><br><span class="line">		pre = cur             <span class="comment">// ⑤ pre更新为b</span></span><br><span class="line">		cur = next            <span class="comment">// ⑥ cur更新为d</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> dummyNode.Next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>这道题有了思路自己模拟一下，很好就写出来了。</p>
 </li>
@@ -1740,7 +1740,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 <a href="http://example.com/" target="_blank">谷安</a>
+    		&copy; 2022-2023 <a href="http://example.com/" target="_blank">谷安</a>
     	</div>
       	<div class="footer-right">
 			
@@ -1880,6 +1880,14 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">clion</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Go</a>
               </li>
              
@@ -1892,19 +1900,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">clion</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cobra</a>
               </li>
              
               <li class="article-tag-list-item">
